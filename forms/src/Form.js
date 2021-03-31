@@ -16,6 +16,7 @@ class Form extends Component {
     }
 
     handleSubmit(evt) {
+        evt.preventDefault();
         alert(`You typed: ${this.state.username}`)
         this.setState({ username: "" })
     }
@@ -30,6 +31,7 @@ class Form extends Component {
                         value={this.state.username}
                         onChange={this.handleChange}    
                     />
+                    <input type="submit" />
                 </form>
             </div>
         )
