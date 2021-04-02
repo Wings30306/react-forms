@@ -1,9 +1,11 @@
 import React, {Component} from "react";
+import uuid from "uuid/dist/v4";
 
 class MultiInputForm extends Component {
     constructor(props){
         super(props);
         this.state = {
+            id: uuid(),
             username: "",
             email: "",
             password: ""
